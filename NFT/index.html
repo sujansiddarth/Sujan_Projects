@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NFT</title>
+    <style>
+         
+        #img1{width: 500px;}
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+        li {
+            float: right;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        li a:hover {
+            background-color: #111;
+        }
+
+        .heading{
+            font-weight:bold;
+            font-size: large;
+        }
+
+        .hapebeast{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
+        }
+        #myVideo{
+            width: 100%;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+       
+        .grid { 
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-gap: 20px;
+            align-items: center;
+        }
+           
+        .grid > article {
+        border: 1px solid #ccc;
+        box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
+        }
+        .grid > article img {
+        max-width: 50%;
+        border-radius: 50%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
+        }
+     
+
+        .text {
+        padding: 0 20px 20px;
+        text-align: center;
+        font-weight: bolder;
+        }
+
+        .text > button {
+        background: black;
+        border: 0;
+        color: white;
+        padding: 10px;
+        width: 100%;
+        font-weight: bolder;
+        opacity: 0.6;
+        transition: 0.3s;
+        cursor: pointer;
+        }
+
+        .text > button:hover{
+            opacity: 1;
+        }
+
+        .artistheading{
+            text-align: center;
+            font-size: 50px;
+            font-weight: bolder;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+
+        .container {
+        position: relative;
+        margin-top: 30px;
+ 
+        }
+        .container .btn a{
+        position: absolute;
+        top: 90%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        background-color: black;
+        color: white;
+        font-size: 16px;
+        padding: 12px 24px;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        text-align: center;
+        opacity: 0.8;
+        transition: 0.3s;
+        text-decoration: none;
+        }
+
+        
+
+        .container .btn:hover a{
+            opacity: 1.5;
+            background-color: blue;
+        }
+
+        .fotter{
+            text-align: center;
+        }
+
+        .button{
+            background: black;
+        border: 0;
+        color: white;
+        padding: 10px;
+        font-weight: bolder;
+        
+        cursor: pointer;
+        }
+
+        
+
+
+    </style>
+</head>
+<body>
+    <section class="navbar">
+        <div>
+            <ul>
+                <li style="float:left" class="heading"><a class="active" href="#home">HAPEBEAST</a></li>
+                <li><a href="https://opensea.io/collection/hapeprime">MINT NOW</a></li>
+                <li><a href="https://twitter.com/HAPEsocial">TWITTER</a></li>
+                <li><a href="#artist">ARTISTS</a></li>
+                
+            </ul>
+        </div>
+    </section>
+    <div>
+        <video autoplay muted loop id="myVideo">
+            <source src="video1.mp4" type="video/mp4">
+        </video>
+    </div>
+   <div id="artist" class="artistheading">
+    ARTISTS
+   </div>
+    <main  class="grid">
+        <article>
+            <img src="https://preview.redd.it/97gplst0e2z71.jpg?auto=webp&s=c8702ad171f12e18cce17274f791e9c5c2cec261" alt="Sample photo">
+            <div class="text">
+                <h3>TROU</h3>
+                <p>UTILITY</p>
+                <button>CONNECT</button>
+            </div>
+        </article>
+        <article>
+            <img src="https://miro.medium.com/max/746/1*bEHFxsoI5uOZ3at03gv1nw.png" alt="Sample photo">
+            <div class="text">
+                <h3>SIDDARTH</h3>
+                <p>LEAD DEVELOPER</p>
+                <button>CONENCT</button>
+            </div>
+        </article>
+        <article>
+            <img src="https://www.nftculture.com/wp-content/uploads/2022/01/FJajYjXWUAUGp7F-300x300.jpg" alt="Sample photo">
+            <div class="text">
+                <h3>SAM</h3>
+                <p>MARKETING HEAD</p>
+                <button>CONNECT</button>
+            </div>
+        </article>
+    </main>
+    <div class="container">
+        <img class="hapebeast" alt="Hapebeast" src="https://s3-ap-southeast-2.amazonaws.com/techau-images/wp-media-folder-techau/wp-content/uploads/2022/01/Hapebeast.png"/>
+        <button class="btn"><a href="https://opensea.io/collection/hapeprime">MINT NOW</a></button>
+    </div>
+    <section class="fotter">
+        <div>
+        <h1 class="footerheading">ARE YOU A HAPE FAN </h1>
+        </div>
+        <div>
+            <button class="button" type="button" onclick="count()">HELL YEAH !!!</button>
+            <button class="button">NOPE</button>
+        </div>
+        <h1>CLUB MEMBERS: <a id="clicks">0</a></h1>
+    </section>
+    
+</body>
+<script>
+    var clicks = 0;
+    function count(){
+    clicks += 1;
+    document.getElementById("clicks").innerHTML = clicks;
+   }
+</script>
+</html>
